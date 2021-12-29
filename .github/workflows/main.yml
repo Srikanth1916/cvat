@@ -1,8 +1,6 @@
 name: srikanth-cvat
 on:
-  push:
-    branches:
-      - 'srikanth_cvat'
+  workflow_dispatch
 
 jobs:
   Unit_testing:
