@@ -64,7 +64,7 @@ jobs:
           context: .
           file: ./Dockerfile
           cache-from: type=local,src=/tmp/cvat_cache_server
-          tags: thati/cvat_server:latest
+          tags: openvino/cvat_server:latest
           load: true
       - name: Running OPA tests
         run: |
@@ -163,7 +163,7 @@ jobs:
           context: .
           file: ./Dockerfile
           cache-from: type=local,src=/tmp/cvat_cache_server
-          tags: thati/cvat_server:latest
+          tags: openvino/cvat_server:latest
           load: true
       - name: Building CVAT UI image
         uses: docker/build-push-action@v2
@@ -171,7 +171,7 @@ jobs:
           context: .
           file: ./Dockerfile.ui
           cache-from: type=local,src=/tmp/cvat_cache_ui
-          tags: thati/cvat_ui:latest
+          tags: openvino/cvat_ui:latest
           load: true
       - name: Instrumentation of the code then rebuilding the CVAT UI
         if: github.ref == 'refs/heads/develop'
